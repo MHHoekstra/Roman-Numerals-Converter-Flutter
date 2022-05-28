@@ -64,7 +64,7 @@ class _NumeralsConverterPageState extends State<NumeralsConverterPage> {
                           arabicNumeralTooLarge: (_) =>
                               'This number is too big!',
                           invalidArabicNumeral: () =>
-                              'Invalid integer.You sure its numeric?',
+                              'Invalid integer. You\'re sure it\'s numeric?',
                           invalidRomanNumeral: (_) => null,
                           negativeOrZeroArabicNumeral: (_) =>
                               'The number must be bigger than 0',

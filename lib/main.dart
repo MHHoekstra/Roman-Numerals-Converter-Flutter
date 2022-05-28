@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'presentation/dependency_injection.dart';
+import 'dependency_injection.dart';
 import 'presentation/numerals_converter/pages/numerals_converter_page.dart';
 
 void main() {

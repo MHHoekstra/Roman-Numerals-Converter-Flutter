@@ -1,11 +1,11 @@
 import 'package:get_it/get_it.dart';
 
-import '../data/numerals_converter/repositories/numerals_converter_repository_impl.dart';
-import '../domain/numerals_converter/repositories/numerals_converter_repository.dart';
-import '../domain/numerals_converter/usecases/convert_from_roman_usecase.dart';
-import '../domain/numerals_converter/usecases/convert_to_roman_usecase.dart';
-import '../domain/numerals_converter/usecases/generate_random_numeral_usecase.dart';
-import 'numerals_converter/blocs/numerals_converter_page_bloc.dart';
+import 'data/numerals_converter/repositories/numerals_converter_repository_impl.dart';
+import 'domain/numerals_converter/repositories/numerals_converter_repository.dart';
+import 'domain/numerals_converter/usecases/convert_from_roman_usecase.dart';
+import 'domain/numerals_converter/usecases/convert_to_roman_usecase.dart';
+import 'domain/numerals_converter/usecases/generate_random_numeral_usecase.dart';
+import 'presentation/numerals_converter/blocs/numerals_converter_page_bloc.dart';
 
 GetIt getIt = GetIt.instance;
 
