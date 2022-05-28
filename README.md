@@ -1,6 +1,6 @@
 # roman_numerals_converter
 
-A simple Roman numerals converter
+A simple Roman numerals converter that runs in iOS, Android, Web and Desktop (but it's designed for a better experience in a mobile device)
 
 ## Getting Started
 This converter converts Roman numerals to Hindi-Arabic, Hindi-Arabic to Roman and also features a random numeral generator.
