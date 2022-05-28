@@ -104,7 +104,7 @@ class NumeralsConverterRepositoryImpl implements NumeralsConverterRepository {
 
   @override
   Either<NumeralsConverterFailure, int> convertRomanToInteger(String numeral) {
-    final parsedNumeral = _parseRomanNumeral(numeral);
+    final parsedNumeral = _parseRomanNumeral(numeral.toUpperCase());
     final RegExp regExp = RegExp(
       r'^M{0,3}((\({1})|(\&{1})|(D{0,1}C{0,3})){0,1}((\%{1})|(\#{1})|(L{0,1}X{0,3})){0,1}((\@{1})|(\!{1})|(V{0,1}I{0,3}))$',
     );
