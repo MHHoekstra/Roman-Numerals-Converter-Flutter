@@ -6,7 +6,7 @@ import '../../../domain/core/models/pair.dart';
 import '../../../domain/numerals_converter/facades/numerals_converter_facade.dart';
 import '../../../domain/numerals_converter/models/numerals_converter_failure.dart';
 
-class NumeralsConverterRepositoryImpl implements NumeralsConverterFacade {
+class NumeralsConverterFacadeImpl implements NumeralsConverterFacade {
   final Map<int, String> _mapOfThousands = {
     1: 'M',
     2: 'MM',

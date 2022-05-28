@@ -6,7 +6,7 @@ import 'package:roman_numerals_converter/domain/numerals_converter/models/numera
 void main() {
   late final NumeralsConverterFacade facade;
   setUpAll(() {
-    facade = NumeralsConverterRepositoryImpl();
+    facade = NumeralsConverterFacadeImpl();
   });
   group('NumeralsConverterRepositoryImpl', () {
     group('convertIntegerToRoman', () {

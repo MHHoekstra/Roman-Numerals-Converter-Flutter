@@ -10,9 +10,9 @@ import 'presentation/numerals_converter/blocs/numerals_converter_page_bloc.dart'
 GetIt getIt = GetIt.instance;
 
 void initiateGetIt() {
-  //Repositories
+  //Facades
   getIt.registerLazySingleton<NumeralsConverterFacade>(
-      () => NumeralsConverterRepositoryImpl());
+      () => NumeralsConverterFacadeImpl());
 
   //UseCases
   getIt.registerLazySingleton<ConvertToRomanUseCase>(
