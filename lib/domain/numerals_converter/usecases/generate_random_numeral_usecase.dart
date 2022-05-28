@@ -1,16 +1,16 @@
 import 'package:dartz/dartz.dart';
 
 import '../../core/models/pair.dart';
+import '../facades/numerals_converter_facade.dart';
 import '../models/numerals_converter_failure.dart';
-import '../repositories/numerals_converter_repository.dart';
 
 class GenerateRandomNumeralUseCase {
-  const GenerateRandomNumeralUseCase(this._repository);
+  const GenerateRandomNumeralUseCase(this._facade);
 
-  final NumeralsConverterRepository _repository;
+  final NumeralsConverterFacade _facade;
 
   Either<NumeralsConverterFailure, Pair<int, String>> execute() {
-    final result = _repository.generateRandomPair();
+    final result = _facade.generateRandomPair();
     return result;
   }
 }

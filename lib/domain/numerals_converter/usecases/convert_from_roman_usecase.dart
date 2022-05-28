@@ -1,15 +1,15 @@
 import 'package:dartz/dartz.dart';
 
+import '../facades/numerals_converter_facade.dart';
 import '../models/numerals_converter_failure.dart';
-import '../repositories/numerals_converter_repository.dart';
 
 class ConvertFromRomanUseCase {
-  const ConvertFromRomanUseCase(this._repository);
+  const ConvertFromRomanUseCase(this._facade);
 
-  final NumeralsConverterRepository _repository;
+  final NumeralsConverterFacade _facade;
 
   Either<NumeralsConverterFailure, int> execute(String numeral) {
-    final result = _repository.convertRomanToInteger(numeral);
+    final result = _facade.convertRomanToInteger(numeral);
     return result;
   }
 }

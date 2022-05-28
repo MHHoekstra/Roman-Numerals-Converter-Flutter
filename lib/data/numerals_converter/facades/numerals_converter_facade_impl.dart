@@ -1,11 +1,12 @@
 import 'dart:math';
 
 import 'package:dartz/dartz.dart';
-import 'package:roman_numerals_converter/domain/core/models/pair.dart';
-import 'package:roman_numerals_converter/domain/numerals_converter/models/numerals_converter_failure.dart';
-import 'package:roman_numerals_converter/domain/numerals_converter/repositories/numerals_converter_repository.dart';
 
-class NumeralsConverterRepositoryImpl implements NumeralsConverterRepository {
+import '../../../domain/core/models/pair.dart';
+import '../../../domain/numerals_converter/facades/numerals_converter_facade.dart';
+import '../../../domain/numerals_converter/models/numerals_converter_failure.dart';
+
+class NumeralsConverterRepositoryImpl implements NumeralsConverterFacade {
   final Map<int, String> _mapOfThousands = {
     1: 'M',
     2: 'MM',

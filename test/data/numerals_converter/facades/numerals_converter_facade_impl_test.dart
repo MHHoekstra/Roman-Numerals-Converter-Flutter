@@ -1,12 +1,12 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:roman_numerals_converter/data/numerals_converter/repositories/numerals_converter_repository_impl.dart';
+import 'package:roman_numerals_converter/data/numerals_converter/facades/numerals_converter_facade_impl.dart';
+import 'package:roman_numerals_converter/domain/numerals_converter/facades/numerals_converter_facade.dart';
 import 'package:roman_numerals_converter/domain/numerals_converter/models/numerals_converter_failure.dart';
-import 'package:roman_numerals_converter/domain/numerals_converter/repositories/numerals_converter_repository.dart';
 
 void main() {
-  late final NumeralsConverterRepository repository;
+  late final NumeralsConverterFacade facade;
   setUpAll(() {
-    repository = NumeralsConverterRepositoryImpl();
+    facade = NumeralsConverterRepositoryImpl();
   });
   group('NumeralsConverterRepositoryImpl', () {
     group('convertIntegerToRoman', () {
@@ -16,7 +16,7 @@ void main() {
         const String expectedNumeral = 'MMMCMLXXVI';
 
         //Act
-        final result = repository.convertIntegerToRoman(number);
+        final result = facade.convertIntegerToRoman(number);
 
         //Assert
         expect(result.isRight(), true);
@@ -30,7 +30,7 @@ void main() {
         const int number = 0;
 
         //Act
-        final result = repository.convertIntegerToRoman(number);
+        final result = facade.convertIntegerToRoman(number);
 
         //Assert
         expect(result.isLeft(), true);
@@ -47,7 +47,7 @@ void main() {
         const int number = 4000;
 
         //Act
-        final result = repository.convertIntegerToRoman(number);
+        final result = facade.convertIntegerToRoman(number);
 
         //Assert
         expect(result.isLeft(), true);
@@ -69,7 +69,7 @@ void main() {
         const String numeral = 'MMMCMLXXVI';
 
         //Act
-        final result = repository.convertRomanToInteger(numeral);
+        final result = facade.convertRomanToInteger(numeral);
         //Assert
         expect(result.isRight(), true);
         expect(
@@ -82,7 +82,7 @@ void main() {
         const String numeral = 'MMMCMMLXXVI';
 
         //Act
-        final result = repository.convertRomanToInteger(numeral);
+        final result = facade.convertRomanToInteger(numeral);
         //Assert
         expect(result.isLeft(), true);
         result.fold(
@@ -97,7 +97,7 @@ void main() {
     group('generateRandomRoman', () {
       test('should successfully generate a pair between 1 and 3999', () {
         //Act
-        final result = repository.generateRandomPair();
+        final result = facade.generateRandomPair();
         //Assert
         expect(result.isRight(), true);
       });
