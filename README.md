@@ -1,6 +1,7 @@
 # roman_numerals_converter
 
-A simple Roman numerals converter that runs in iOS, Android, Web and Desktop (but it's designed for a better experience in a mobile device)
+A simple Roman numerals converter that runs in iOS, Android, Web and Desktop (but it's designed for a better experience in a mobile device).
+This application is heavily overengineered for it's purpose, but that's intentional as I wanted to experiment some of the elements that I used.
 
 ## Getting Started
 This converter converts Roman numerals to Hindi-Arabic, Hindi-Arabic to Roman and also features a random numeral generator.
@@ -12,9 +13,9 @@ For the Dependency Injection I used the get_it package, as it is the most popula
 ### Error Handling
 It's Error Handling is based on a Functional approach with Dartz's Either class and Sealed Unions, something that I been experimenting on and seems (to me), enjoyable to use and less error prone for it does not depends on Try Catches inside the domain or presentation while also ensuring that you deal with the error possibility and not simply ignore it. 
 
-### Unitary Tests
+### Unit Tests
 This project has some unitary tests for the domain and data layers.
 
 ### Caveats
-I've not polished it up to the point of adding Internationalization nor focused on styling and one might argue that some functions and components could be extracted and etc.
+I've not polished it up to the point of adding Internationalization nor focused on styling and one might argue that some functions and components could be extracted and etc. Also, I should have taken better care of my commits to reflect a better organization.
 
